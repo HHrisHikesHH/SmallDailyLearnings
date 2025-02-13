@@ -10,3 +10,4 @@ cp -r templates/django-template projects/my-new-django-api
 ```sh
 python create_project.py
 ```
+temp
