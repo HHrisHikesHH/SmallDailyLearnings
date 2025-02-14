@@ -47,19 +47,14 @@ def create_project():
     # Setup Backend (Django)
     print("\n⚡ Setting up Backend...")
     subprocess.run(["python", "-m", "venv", "venv"], cwd=backend_path, check=True)
-
-    # Activate virtual environment based on OS
-    if os.name == "nt":  # Windows
-        venv_activate = os.path.join(backend_path, "venv", "Scripts", "activate.bat")
-    else:  # macOS/Linux
-        venv_activate = f"source {os.path.join(backend_path, 'venv', 'bin', 'activate')}"
+    venv_activate = f"source {os.path.join(backend_path, 'venv', 'bin', 'activate')}"
 
     # Install pip inside virtual environment
     subprocess.run(["curl", "-o", "get-pip.py", "https://bootstrap.pypa.io/get-pip.py"], cwd=backend_path, check=True)
     subprocess.run(["python", "get-pip.py"], cwd=backend_path, check=True)
 
     # Install Django dependencies
-    subprocess.run([f"{venv_activate} && pip install -r requirements.txt"], cwd=backend_path, shell=True, check=True)
+    subprocess.run([f". {venv_activate} && pip install -r requirements.txt"], cwd=backend_path, shell=True, check=True)
 
     # Start Django server
     subprocess.Popen([f"{venv_activate} && python manage.py runserver"], cwd=backend_path, shell=True)
