@@ -9,6 +9,9 @@ java -ea Main  # -ea enables assertions
 ```
 The `-ea` flag enables assertions to ensure correctness.
 
+```sh
+python3 Main.py
+```
 ---
 
 ## Brute Force Approach (O(n²))
@@ -30,6 +33,19 @@ public int[] twoSum(int[] nums, int target) {
     return new int[]{}; 
 }
 ```
+
+```python
+def twoSum(self, nums, target):
+    n = len(nums) 
+    
+    for i in range(n): 
+        for j in range(i + 1, n): 
+            if nums[i] + nums[j] == target:
+                return [i, j] 
+    
+    return []
+```
+
 ### Complexity Analysis
 - **Time Complexity:** O(n²) – Since we check every pair, it is inefficient for large inputs.  
 - **Space Complexity:** O(1) – No extra space is used.
@@ -58,6 +74,18 @@ public int[] twoSum(int[] nums, int target) {
     }
     return res;
 }
+```
+
+```python
+def twoSum(self, nums, target):
+    mp = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in mp:
+            return [i, mp[diff]]
+        mp[num] = i
+
+    return []
 ```
 ### Complexity Analysis
 - **Time Complexity:** O(n) – We traverse the array once, using constant-time lookups in HashMap.  
