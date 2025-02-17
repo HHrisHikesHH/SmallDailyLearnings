@@ -2,18 +2,6 @@
 
 🔗 [LeetCode Problem](https://leetcode.com/problems/two-sum/description/)
 
-## How to Run
-```sh
-javac Main.java
-java -ea Main  # -ea enables assertions
-```
-The `-ea` flag enables assertions to ensure correctness.
-
-```sh
-python3 Main.py
-```
----
-
 ## Brute Force Approach (O(n²))
 This approach uses a **nested loop** to check every possible pair:
 
