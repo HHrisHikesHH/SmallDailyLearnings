@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 TEMPLATES_DIR = "templates"
-PROJECTS_DIR = "projects"
+PROJECTS_DIR = "dev"
 
 def create_project():
     project_name = input("Enter your project name: ").strip()
