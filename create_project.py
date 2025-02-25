@@ -59,7 +59,7 @@ def create_project():
     # Start Django server
     subprocess.Popen([f"{venv_activate} && python manage.py runserver"], cwd=backend_path, shell=True)
 
-    print("\n🚀 Your project is running! Frontend on React and Backend on Django!")
+    print("\n🚀 Your project is running! Frontend on React!")
 
 if __name__ == "__main__":
     create_project()
