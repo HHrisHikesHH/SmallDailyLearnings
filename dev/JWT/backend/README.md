@@ -1,6 +1,6 @@
 # 🚀 Django JWT Authentication Setup
 
-Welcome, fellow developer! 🧑‍💻 Ready to conquer the world of authentication with JWT in Django? Buckle up because we're diving into the mystical realm of **JSON Web Tokens (JWTs)**! 🔥
+Welcome, fellow developer! 🧑‍💻 Ready to conquer the world of authentication with JWT in Django? Buckle up because we're diving into the mystical realm of **JSON Web Tokens (JWTs)**!! 🔥
 
 ---
 
